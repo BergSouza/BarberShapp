@@ -10,6 +10,21 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BarberShapp">
         <activity
+            android:name=".FilaBarbeariaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InfoBarbeariaActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SelecionarBarbeariaAcitivity"
+            android:exported="false" />
+        <activity
+            android:name=".usuario.SelecBarbActivity"
+            android:exported="false" />
+        <activity
+            android:name=".usuario.SelecionaBarbeariaActivity"
+            android:exported="false" />
+        <activity
             android:name=".CadastroBarbeariaActivity"
             android:exported="false" />
         <activity

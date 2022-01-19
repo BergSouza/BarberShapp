@@ -23,4 +23,9 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent(MainActivity.this, CadastroBarbeariaActivity.class);
         startActivity(i);
     }
+
+    public void realizarLogin(View v){
+        Intent i = new Intent(MainActivity.this, SelecionarBarbeariaAcitivity.class);
+        startActivity(i);
+    }
 }

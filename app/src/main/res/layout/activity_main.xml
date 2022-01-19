@@ -63,6 +63,7 @@
             android:id="@+id/button"
             android:layout_width="280dp"
             android:layout_height="64dp"
+            android:onClick="realizarLogin"
             android:text="Logar" />
 
         <TextView
@@ -76,7 +77,7 @@
             android:id="@+id/button2"
             android:layout_width="277dp"
             android:layout_height="68dp"
-            android:onClick="irParasdasd"
+            android:onClick="irParaCadastro"
             android:text="IR PARA CADASTRO" />
     </LinearLayout>
 
