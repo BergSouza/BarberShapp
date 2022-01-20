@@ -10,6 +10,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.BarberShapp">
         <activity
+            android:name=".AvaliacaoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BarbeiroActivity"
+            android:exported="false" />
+        <activity
             android:name=".FilaBarbeariaActivity"
             android:exported="false" />
         <activity

@@ -33,7 +33,7 @@
             android:textSize="20sp" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName3"
+            android:id="@+id/edtTxtNome"
             android:layout_width="283dp"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -42,12 +42,18 @@
             android:hint="Digite aqui seu nome"/>
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
-            android:layout_width="279dp"
-            android:layout_height="45dp"
+            android:id="@+id/edtTxtUsuario"
+            android:layout_width="289dp"
+            android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text=""
+            android:hint="Digite aqui seu usuario"/>
+
+        <EditText
+            android:id="@+id/edtTxtEmail"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:ems="10"
             android:hint="Digite aqui seu email"/>
 
         <EditText
@@ -59,10 +65,10 @@
             android:hint="Defina uma senha"/>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/btnCadastrar"
             android:layout_width="280dp"
             android:layout_height="64dp"
-            android:text="Cdastrar" />
+            android:text="Cadastrar" />
 
         <TextView
             android:id="@+id/textView3"

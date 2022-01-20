@@ -23,6 +23,7 @@ public class InfoBarbeariaActivity extends AppCompatActivity {
 
     public void entrarNaFila(View view){
         Intent i = new Intent(InfoBarbeariaActivity.this, FilaBarbeariaActivity.class);
+        i.putExtra("idBarbearia", getIntent().getExtras().getInt("idBarbearia"));
         startActivity(i);
     }
 }

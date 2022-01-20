@@ -11,12 +11,15 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.barbershapp.DAO.DAOBarbearia;
+import com.example.barbershapp.classes.Barbearia;
+
 import java.util.ArrayList;
 
 public class SelecionarBarbeariaAcitivity extends AppCompatActivity {
 
     ListView lista;
-    //String barbearia;
+    int barbeariaSelecionada;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,9 +28,13 @@ public class SelecionarBarbeariaAcitivity extends AppCompatActivity {
 
         lista = findViewById(R.id.LvBarbearias);
 
-        ArrayList<String> barbearias = preencherDados();
+        DAOBarbearia daobarbearia = new DAOBarbearia();
+        //daobarbearia.start();
 
-        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, barbearias);
+        ArrayList<Barbearia> barbearias = daobarbearia.getBarbearias();
+        ArrayList<String> barbeariasNome = pegaNome(barbearias);
+
+        ArrayAdapter<String> arrayAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, barbeariasNome);
         lista.setAdapter(arrayAdapter);
 
         lista.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -35,24 +42,23 @@ public class SelecionarBarbeariaAcitivity extends AppCompatActivity {
                 //barbearia = barbearias.get(position);
                 //Toast toast = Toast.makeText(SelecionarBarbeariaAcitivity.this, barbearias.get(position), Toast.LENGTH_SHORT);
                 //toast.show();
-                acessarBarbearia();
+                //barbeariaSelecionada = ;
+                acessarBarbearia(barbearias.get(position).getId());
             }
         });
     }
 
-    private ArrayList<String> preencherDados(){
-        ArrayList<String> barbearias = new ArrayList<String>();
-        barbearias.add("Barbearia1");
-        barbearias.add("Barbearia2");
-        barbearias.add("Barbearia3");
-        barbearias.add("Barbearia4");
-        barbearias.add("Barbearia5");
-        barbearias.add("Barbearia6");
-        return barbearias;
+    private ArrayList<String> pegaNome(ArrayList<Barbearia> barbearias) {
+        ArrayList<String> dados = new ArrayList<>();
+        for(int i = 0; i < barbearias.size();i++){
+            dados.add(barbearias.get(i).getNome());
+        }
+        return dados;
     }
 
-    public void acessarBarbearia(){
+    public void acessarBarbearia(int id){
         Intent i = new Intent(SelecionarBarbeariaAcitivity.this, InfoBarbeariaActivity.class);
+        i.putExtra("idBarbearia", id);
         startActivity(i);
     }
 }
