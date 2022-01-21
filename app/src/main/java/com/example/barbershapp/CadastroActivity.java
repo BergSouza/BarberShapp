@@ -11,6 +11,7 @@ import android.widget.Toast;
 import com.example.barbershapp.DAO.DAOContas;
 import com.example.barbershapp.DAO.DAOUsuario;
 import com.example.barbershapp.classes.Usuario;
+import com.example.barbershapp.controller.UsuarioController;
 
 public class CadastroActivity extends AppCompatActivity {
 
@@ -27,13 +28,10 @@ public class CadastroActivity extends AppCompatActivity {
 
     public void irParaLogin(View v){
         finish();
-        //CadastroActivity cadAct;
-        //Intent i = new Intent(MainActivity.this, CadastroActivity.class);
-        //startActivity(i);
     }
 
     public void realizarCadastro(View v){
-        DAOUsuario daousuario = new DAOUsuario();
+        UsuarioController usuarioController = new UsuarioController();
         edtTxtNome = findViewById(R.id.edtTxtNome);
         edtTxtUsuario = findViewById(R.id.edtTxtUsuario);
         edtTxtEmail = findViewById(R.id.edtTxtEmail);
@@ -43,7 +41,7 @@ public class CadastroActivity extends AppCompatActivity {
         String email = String.valueOf((edtTxtEmail.getText()));
         String senha = String.valueOf((edtTxtSenha.getText()));
         Usuario newUser = new Usuario(0,nome,usuario,email,senha);
-        if(daousuario.insertUsuario(newUser)){
+        if(usuarioController.insertUsuario(newUser)){
             Toast toast = Toast.makeText(CadastroActivity.this, "Conta criada com sucesso!", Toast.LENGTH_SHORT);
             toast.show();
             finish();

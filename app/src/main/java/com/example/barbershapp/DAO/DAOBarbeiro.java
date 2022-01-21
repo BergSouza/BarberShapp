@@ -24,13 +24,11 @@ public class DAOBarbeiro{
         Barbearia barbearia = daobarbearia.getBarbearia(idBarbearia);
         ArrayList<Barbeiro> barbeirosEncontrados = new ArrayList<>();
         for(int i = 0; i < banco.size();i++){
-
             for(int o = 0; o < barbearia.getBarbeiros().size(); o++){
                 if(banco.get(i).getId() == barbearia.getBarbeiros().get(o)){
                     barbeirosEncontrados.add(banco.get(i));
                 }
             }
-
         }
         return barbeirosEncontrados;
     }

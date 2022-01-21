@@ -3,6 +3,7 @@ package com.example.barbershapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Adapter;
 import android.widget.AdapterView;
@@ -35,17 +36,20 @@ public class FilaBarbeariaActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_fila_barbearia);
 
+        daobarbeiro = new DAOBarbeiro();
+
+        btnFila = findViewById(R.id.btnFila);
+        txtPosicaoFila = findViewById(R.id.txtViewPosicaoFila);
         listaBarb = findViewById(R.id.lvBarbeiros);
         barbeariaSelecionada = getIntent().getExtras().getInt("idBarbearia");
-        ArrayList<Barbeiro> barbeiros = daobarbeiro.getBarbeirosDaBarbearia(barbeariaSelecionada);
+
+        barbeiros = daobarbeiro.getBarbeirosDaBarbearia(barbeariaSelecionada);
         ArrayList<String> barbeirosNomes = pegaNomes(barbeiros);
         ArrayList<Integer> barbeirosSituacao = pegaSituacoes(barbeiros);
         ArrayList<String> showBarbeiros = showInfoBarbeiros(barbeiros);
 
         ArrayAdapter<String> barbeirosAdapt = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, showBarbeiros);
         listaBarb.setAdapter(barbeirosAdapt);
-
-        daobarbeiro = new DAOBarbeiro();
 
         txtViewBarbeiroSelecionado = findViewById(R.id.txtViewBarbeiroSelecionado);
         txtViewPessoasNaFila = findViewById(R.id.txtViewPessoasFila);
@@ -99,23 +103,23 @@ public class FilaBarbeariaActivity extends AppCompatActivity {
     }
 
     public void BotaoFila(View v){
-        //int posicaoFila = daobarbeiro.getPosicaoFila(barbeiros.get(posicaoBarbeiroSelecionado).getId(), 0);
-        //if(posicaoFila == 0){
-        //    entrarNaFila();
-        //}else{
-        //   sairDaFila();
-        //}
+        int posicaoFila = daobarbeiro.getPosicaoFila(barbeiros.get(posicaoBarbeiroSelecionado).getId(), 0);
+        if(posicaoFila == 0){
+            entrarNaFila();
+        }else{
+           sairDaFila();
+        }
     }
 
     public void entrarNaFila(){
-        //btnFila.setText("SAIR DA FILA");
-        //daobarbeiro.insertUsuarioFila(barbeiros.get(posicaoBarbeiroSelecionado).getId(), 0);
-        //txtPosicaoFila.setText("VOCÊ ESTÁ NA FILA!");
+        btnFila.setText("SAIR DA FILA");
+        daobarbeiro.insertUsuarioFila(barbeiros.get(posicaoBarbeiroSelecionado).getId(), 0);
+        txtPosicaoFila.setText("VOCÊ ESTÁ NA FILA!");
     }
 
     public void sairDaFila(){
-        //btnFila.setText("ENTRAR NA FILA");
-        //daobarbeiro.removeUsuarioFila(barbeiros.get(posicaoBarbeiroSelecionado).getId(), 0);
-        //txtPosicaoFila.setText("VOCÊ NÃO ESTÁ NA FILA!");
+        btnFila.setText("ENTRAR NA FILA");
+        daobarbeiro.removeUsuarioFila(barbeiros.get(posicaoBarbeiroSelecionado).getId(), 0);
+        txtPosicaoFila.setText("VOCÊ NÃO ESTÁ NA FILA!");
     }
 }

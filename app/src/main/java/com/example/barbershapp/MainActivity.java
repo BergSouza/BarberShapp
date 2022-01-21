@@ -10,6 +10,8 @@ import android.widget.Toast;
 
 import com.example.barbershapp.DAO.DAOBarbeiro;
 import com.example.barbershapp.DAO.DAOContas;
+import com.example.barbershapp.controller.BarbeiroController;
+import com.example.barbershapp.controller.ContasController;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,8 +26,7 @@ public class MainActivity extends AppCompatActivity {
         edtTxtUsuarioEmail = findViewById(R.id.edtTxtUsuarioEmail);
         edtTxtSenha = findViewById(R.id.edtTxtSenha);
 
-        DAOBarbeiro daobarbeiro = new DAOBarbeiro();
-        //DAOBarbearia daoBarbearia = new DAOBarbearia();
+        BarbeiroController barbeiroController = new BarbeiroController();
     }
 
     public void irParaCadastro(View v){
@@ -39,15 +40,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void realizarLogin(View v){
-        DAOContas daocontas = new DAOContas();
+        ContasController contasController = new ContasController();
         String usuarioEmail = String.valueOf(edtTxtUsuarioEmail.getText());
         String senha = String.valueOf(edtTxtSenha.getText());
-        if(daocontas.verificaLogin(usuarioEmail, senha)){
+        if(contasController.verificaLogin(usuarioEmail, senha)){
             Intent i = new Intent(MainActivity.this, SelecionarBarbeariaAcitivity.class);
             startActivity(i);
         }else{
             Toast toast = Toast.makeText(MainActivity.this, "Usuario/Email ou Senha Inválido(s)", Toast.LENGTH_SHORT);
             toast.show();
         }
+
     }
 }

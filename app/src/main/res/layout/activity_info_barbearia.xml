@@ -18,25 +18,25 @@
             android:text="BARBEARIA" />
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/txtViewEndereco"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="ENDEREÇO" />
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/txtViewContato"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="CONTATO" />
 
         <TextView
-            android:id="@+id/textView7"
+            android:id="@+id/txtViewHorario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="HORARIO FUNCIONAMENTO" />
 
         <TextView
-            android:id="@+id/textView8"
+            android:id="@+id/txtViewFormasPagamento"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="FORMAS PAGAMENTO" />

@@ -6,6 +6,11 @@ public class Barbearia {
     int id;
     String nome;
     ArrayList<Integer> barbeiros;
+    String endereco;
+    String contato;
+    String horarioFuncionamento;
+    String formasPagamento;
+    String situacao;
     int idDono;
 
     public Barbearia(int id, String nome, int idDono){
@@ -46,5 +51,36 @@ public class Barbearia {
     }
     public int getIdDono(){
         return this.idDono;
+    }
+
+    public void setEndereco(String endereco){
+        this.endereco = endereco;
+    }
+    public String getEndereco(){
+        return this.endereco;
+    }
+    public void setContato(String contato){
+        this.contato = contato;
+    }
+    public String getContato(){
+        return this.contato;
+    }
+    public void setHorarioFucionamento(String horarioFucionamento){
+        this.horarioFuncionamento = horarioFucionamento;
+    }
+    public String getHorarioFuncionamento(){
+        return this.horarioFuncionamento;
+    }
+    public void setFormasPagamento(String formasPagamento){
+        this.formasPagamento = formasPagamento;
+    }
+    public String getFormasPagamento(){
+        return this.formasPagamento;
+    }
+    public void setSituacao(String situacao){
+        this.situacao = situacao;
+    }
+    public String getSituacao() {
+        return this.situacao;
     }
 }

@@ -28,16 +28,16 @@ public class DAOUsuario {
 
     public boolean insertUsuario(Usuario usuario){
         for(int i = 0; i < banco.size(); i++){
-            if(!banco.get(i).getUsuario().equals(usuario.getUsuario())){
-                if(!banco.get(i).getEmail().equals(usuario.getEmail())){
+            if(banco.get(i).getUsuario().equals(usuario.getUsuario())){
+                return false;
+            }else{
+                if(banco.get(i).getEmail().equals(usuario.getEmail())){
+                    return false;
+                }else{
                     usuario.setId(banco.get(banco.size()-1).getId());
                     banco.add(usuario);
                     return true;
-                }else{
-                    return false;
                 }
-            }else{
-                return false;
             }
         }
         return false;
