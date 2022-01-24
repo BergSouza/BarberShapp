@@ -57,17 +57,24 @@
             android:hint="Digite aqui seu email"/>
 
         <EditText
-            android:id="@+id/editTextTextPassword"
+            android:id="@+id/edtTxtSenhaC"
             android:layout_width="283dp"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPassword"
             android:hint="Defina uma senha"/>
 
+        <CheckBox
+            android:id="@+id/cBoxBarbeiro"
+            android:layout_width="283dp"
+            android:layout_height="wrap_content"
+            android:text="Se cadastrar como Barbeiro" />
+
         <Button
             android:id="@+id/btnCadastrar"
             android:layout_width="280dp"
             android:layout_height="64dp"
+            android:onClick="realizarCadastro"
             android:text="Cadastrar" />
 
         <TextView

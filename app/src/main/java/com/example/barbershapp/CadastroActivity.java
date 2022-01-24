@@ -35,7 +35,7 @@ public class CadastroActivity extends AppCompatActivity {
         edtTxtNome = findViewById(R.id.edtTxtNome);
         edtTxtUsuario = findViewById(R.id.edtTxtUsuario);
         edtTxtEmail = findViewById(R.id.edtTxtEmail);
-        edtTxtSenha = findViewById(R.id.edtTxtSenha);
+        edtTxtSenha = findViewById(R.id.edtTxtSenhaC);
         String nome = String.valueOf(edtTxtNome.getText());
         String usuario = String.valueOf(edtTxtUsuario.getText());
         String email = String.valueOf((edtTxtEmail.getText()));

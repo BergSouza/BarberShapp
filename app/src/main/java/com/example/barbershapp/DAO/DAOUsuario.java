@@ -34,7 +34,7 @@ public class DAOUsuario {
                 if(banco.get(i).getEmail().equals(usuario.getEmail())){
                     return false;
                 }else{
-                    usuario.setId(banco.get(banco.size()-1).getId());
+                    usuario.setId(banco.get(banco.size()-1).getId()+1);
                     banco.add(usuario);
                     return true;
                 }
