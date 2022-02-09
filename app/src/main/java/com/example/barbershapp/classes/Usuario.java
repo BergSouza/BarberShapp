@@ -1,24 +1,25 @@
 package com.example.barbershapp.classes;
 
 public class Usuario {
-    int id;
+    String id;
     String nome;
     String usuario;
     String email;
     String senha;
+    String tipo;
 
-    public Usuario(int id, String nome, String usuario, String email, String senha){
-        this.id = id;
+    public Usuario(String nome, String usuario, String email, String senha, String tipo){
         this.nome = nome;
         this.usuario = usuario;
         this.email = email;
         this.senha = senha;
+        this.tipo = tipo;
     }
-    public int getId(){
-        return this.id;
-    }
-    public void setId(int id) {
+    public void setId(String id){
         this.id = id;
+    }
+    public String getId(){
+        return this.id;
     }
     public void setNome(String nome){
         this.nome = nome;
@@ -44,6 +45,11 @@ public class Usuario {
     public String getSenha(){
         return this.senha;
     }
-
+    public void setTipo(String tipo){
+        this.tipo = tipo;
+    }
+    public String getTipo(){
+        return this.tipo;
+    }
 
 }

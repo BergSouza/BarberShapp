@@ -24,22 +24,48 @@
             android:text="Antes de Sair, deixe aqui sua avaliação abaixo!" />
 
         <TextView
+            android:id="@+id/textView18"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nota" />
+
+        <Spinner
+            android:id="@+id/spNota"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
             android:id="@+id/textView12"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Comentários:" />
 
         <EditText
-            android:id="@+id/editTextTextPersonName"
+            android:id="@+id/edtTxtComentario"
             android:layout_width="match_parent"
             android:layout_height="209dp"
             android:ems="10"
             android:inputType="textPersonName" />
 
-        <Button
-            android:id="@+id/button"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="Finalizar" />
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnPular"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="finaliza"
+                android:text="Pular" />
+
+            <Button
+                android:id="@+id/btnAvaliar"
+                android:layout_width="213dp"
+                android:layout_height="wrap_content"
+                android:onClick="avalia"
+                android:text="Avaliar" />
+        </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

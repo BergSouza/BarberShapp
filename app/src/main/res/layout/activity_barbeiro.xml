@@ -18,19 +18,28 @@
             android:text="Status:" />
 
         <Spinner
-            android:id="@+id/spinner"
+            android:id="@+id/spStatus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <TextView
-            android:id="@+id/textView13"
+            android:id="@+id/txtViewTotalFila"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Fila [Total Pessoas: 10]" />
 
         <ListView
+            android:id="@+id/lvUsuariosFila"
             android:layout_width="match_parent"
-            android:layout_height="555dp" />
+            android:layout_height="555dp" >
+
+        </ListView>
+
+        <TextView
+            android:id="@+id/txtViewProximoUsuarioFila"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Próximo Usuário da Fila: " />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -38,18 +47,20 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/button7"
+                android:id="@+id/btnPularUsuarioFila"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:onClick="pularUsuario"
                 android:text="Pular" />
 
             <Button
-                android:id="@+id/button6"
+                android:id="@+id/btnIniciarFinalizarCorte"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
-                android:text="Finalizar Atual" />
+                android:onClick="iniciarFinalizarCorte"
+                android:text="INICIAR PRÓXIMO" />
         </LinearLayout>
     </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

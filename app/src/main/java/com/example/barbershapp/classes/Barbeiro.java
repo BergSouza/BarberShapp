@@ -4,10 +4,10 @@ import java.util.ArrayList;
 
 public class Barbeiro extends Usuario {
     int situacao;
-    ArrayList<Integer> fila;
+    ArrayList<String> fila;
 
-    public Barbeiro(int id, String nome, String usuario, String email, String senha){
-        super(id, nome,usuario,email,senha);
+    public Barbeiro(String nome, String usuario, String email, String senha){
+        super(nome,usuario,email,senha,"barbeiro");
         fila = new ArrayList<>();
     }
 
@@ -17,18 +17,18 @@ public class Barbeiro extends Usuario {
     public int getSituacao(){
         return this.situacao;
     }
-    public void addUsuarioFila(int idUsuario){
+    public void addUsuarioFila(String idUsuario){
         this.fila.add(idUsuario);
     }
-    public int getPrimeiroUsuarioFila(){
+    public String getPrimeiroUsuarioFila(){
         return this.fila.get(0);
     }
-    public ArrayList<Integer> getFila(){
+    public ArrayList<String> getFila(){
         return this.fila;
     }
     public boolean verificaUsuarioFila(int idUsuario){
         for(int i = 0; i < fila.size(); i++){
-            if(fila.get(i) == idUsuario){
+            if(fila.get(i).equals(idUsuario)){
                 return true;
             }
         }
@@ -36,7 +36,7 @@ public class Barbeiro extends Usuario {
     }
     public void removeUsuarioFila(int idUsuario){
         for(int i = 0; i < fila.size(); i++){
-            if(fila.get(i) == idUsuario){
+            if(fila.get(i).equals(idUsuario)){
                 fila.remove(idUsuario);
             }
         }

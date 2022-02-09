@@ -5,24 +5,18 @@
     xmlns:map="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CadastroBarbeariaActivity">
+    tools:context=".EditarBarbeariaActivity">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical">>
 
         <TextView
-            android:id="@+id/textView5"
+            android:id="@+id/textView522"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="CADASTRAR BARBEARIA (* = CAMPOS OBRIGATÓRIOS)" />
-
-        <TextView
-            android:id="@+id/textView8"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="ENDEREÇO NO MAPA" />
+            android:text="ATUALIZAR BARBEARIA" />
 
         <fragment xmlns:android="http://schemas.android.com/apk/res/android"
             xmlns:tools="http://schemas.android.com/tools"
@@ -43,76 +37,77 @@
             />
 
         <TextView
-            android:id="@+id/textView13"
+            android:id="@+id/textView19"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="NOME BARBEARIA (*)" />
 
         <EditText
-            android:id="@+id/edtTxtCNome"
+            android:id="@+id/edtTxtABNome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="DIGITE UM NOME PARA SUA BARBEARIA"/>
+            android:hint="DIGITE UM NOME PARA SUA BARBEARIA" />
 
         <TextView
-            android:id="@+id/textView14"
+            android:id="@+id/textView20"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="ENDEREÇO (*)" />
 
         <EditText
-            android:id="@+id/edtTxtCEndereco"
+            android:id="@+id/edtTxtABEndereco"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="DIGITE O ENDEREÇO"/>
+            android:hint="DIGITE O ENDEREÇO" />
 
         <TextView
-            android:id="@+id/textView15"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="CONTATO" />
-
-        <EditText
-            android:id="@+id/edtTxtCContato"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:hint="DIGITE O TELEFONE OU FORMA DE CONTATO"/>
-
-        <TextView
-            android:id="@+id/textView16"
+            android:id="@+id/textView21"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="HORÁRIO FUNCIONAMENTO (*)" />
 
         <EditText
-            android:id="@+id/edtTxtCHorario"
+            android:id="@+id/edtTxtABHorario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:hint="HORÁRIO DE FUNCIONAMENTO ex: 10:00 - 20:00"/>
+            android:hint="HORÁRIO DE FUNCIONAMENTO ex: 10:00 - 20:00" />
 
         <TextView
-            android:id="@+id/textView17"
+            android:id="@+id/textView22"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="FORMAS DE PAGAMENTO(*)" />
+            android:text="CONTATO:" />
 
         <EditText
-            android:id="@+id/edtTxtCPagamentos"
+            android:id="@+id/edtTxtABContato"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
-            android:inputType="textPersonName"
-            android:hint="FORMAS DE PAGAMENTO. ex: cartão de crédito, débito"/>
+            android:hint="DIGITE O TELEFONE OU FORMA DE CONTATO" />
 
-        <Button
-            android:id="@+id/button3"
+        <TextView
+            android:id="@+id/textView23"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="cadastrarBarbearia"
-            android:text="Cadastrar Barbearia" />
+            android:text="FORMAS DE PAGAMENTO (*)" />
+
+        <EditText
+            android:id="@+id/edtTxtABPagamentos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:hint="FORMAS DE PAGAMENTO. ex: cartão de crédito, débito"
+            android:inputType="textPersonName" />
+
+        <Button
+            android:id="@+id/btnAtualizarBarbearia"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="atualizarBarbearia"
+            android:text="Atualizar Barbearia" />
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

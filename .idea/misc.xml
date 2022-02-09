@@ -4,15 +4,20 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="..\:/Users/bergs/AndroidStudioProjects/BarberShapp/app/src/main/res/layout/activity_avaliacao.xml" value="0.22" />
+        <entry key="..\:/Users/bergs/AndroidStudioProjects/BarberShapp/app/src/main/res/layout/activity_barbearia_gerencia.xml" value="0.16" />
         <entry key="..\:/Users/bergs/AndroidStudioProjects/BarberShapp/app/src/main/res/layout/activity_barbeiro.xml" value="0.22" />
+        <entry key="..\:/Users/bergs/AndroidStudioProjects/BarberShapp/app/src/main/res/layout/activity_barbeiro_gerencia.xml" value="0.1328125" />
         <entry key="..\:/Users/bergs/AndroidStudioProjects/BarberShapp/app/src/main/res/layout/activity_cadastro.xml" value="0.17119565217391305" />
-        <entry key="..\:/Users/bergs/AndroidStudioProjects/BarberShapp/app/src/main/res/layout/activity_cadastro_barbearia.xml" value="0.12" />
+        <entry key="..\:/Users/bergs/AndroidStudioProjects/BarberShapp/app/src/main/res/layout/activity_cadastro_barbearia.xml" value="0.25" />
+        <entry key="..\:/Users/bergs/AndroidStudioProjects/BarberShapp/app/src/main/res/layout/activity_editar_barbearia.xml" value="0.25" />
         <entry key="..\:/Users/bergs/AndroidStudioProjects/BarberShapp/app/src/main/res/layout/activity_fila_barbearia.xml" value="0.2" />
         <entry key="..\:/Users/bergs/AndroidStudioProjects/BarberShapp/app/src/main/res/layout/activity_info_barbearia.xml" value="0.22" />
         <entry key="..\:/Users/bergs/AndroidStudioProjects/BarberShapp/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/Users/bergs/AndroidStudioProjects/BarberShapp/app/src/main/res/layout/activity_maps.xml" value="0.14855072463768115" />
         <entry key="..\:/Users/bergs/AndroidStudioProjects/BarberShapp/app/src/main/res/layout/activity_selec_barb.xml" value="0.10364583333333334" />
         <entry key="..\:/Users/bergs/AndroidStudioProjects/BarberShapp/app/src/main/res/layout/activity_seleciona_barbearia.xml" value="0.2" />
-        <entry key="..\:/Users/bergs/AndroidStudioProjects/BarberShapp/app/src/main/res/layout/activity_selecionar_barbearia_acitivity.xml" value="0.1" />
+        <entry key="..\:/Users/bergs/AndroidStudioProjects/BarberShapp/app/src/main/res/layout/activity_selecionar_barbearia_acitivity.xml" value="0.25" />
+        <entry key="..\:/Users/bergs/AndroidStudioProjects/BarberShapp/app/src/main/res/layout/activity_virar_barbeiro.xml" value="0.12552083333333333" />
         <entry key="..\:/Users/bergs/AndroidStudioProjects/BarberShapp/app/src/main/res/layout/fragment_first.xml" value="0.1802536231884058" />
       </map>
     </option>
